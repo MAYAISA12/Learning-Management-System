@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <title>LMS : Totolan Elementary School</title>
+
+    <!--TOTOLAN LOGO-->
+    <link rel="icon" type="image/png" href="./images/image.png">
+
+    <!-- Google Fonts link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,600;1,700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+ 
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- External link -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body class="body">
+	<header>
+		<nav id="header-nav" class="navbar navbar-expand-lg navbar-light">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="./adminpage.html" class="float-left d-none d-sm-block"> <!-- pull-left is just a float left but in bootstrap way -->
+						<div id="logo-img" alt="Logo image"></div>
+					</a>
+
+					<div class="navbar-brand">
+						<a href="./adminpage.html" >
+							<h1>TOTOLAN ELEMENTARY SCHOOL</h1>
+						</a>
+						<p>
+							<span>Learning Management System</span>
+						</p>
+					</div>
+				</div>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsable-nav" aria-control="collapsable-nav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="collapsable-nav">
+					<ul id="nav-list" class="navbar-nav mx-auto">
+						<li class="nav-item">
+						    <a class="nav-link" href="./adminprofile.html"><small>MY PROFILE</small></a>
+						</li>
+						<li class="nav-item">
+						    <a class="nav-link" href="./adminfaculty.html"><small>FACULTY</small></a>
+						</li>
+						<li class="nav-item">
+						    <a class="nav-link" href="./adminstudent.html"><small>STUDENT</small></a>
+						</li>
+						<!-- Dropdown of SECTION-->
+			            <li class="nav-item dropdown">
+			              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+			                <small>SECTION</small>
+			              </a>
+			              <div class="dropdown-menu">
+			                <a class="dropdown-item" href="./adminsection.html"><small>SECTION LIST</small></a>
+			                <a class="dropdown-item" href="./adminaddsection.html"><small>ADD SECTION</small></a>
+			              </div>
+			            </li>
+						<li class="nav-item">
+						    <a class="nav-link" href="./index.html"><small>LOG OUT</small></a>
+						</li>
+					</ul>
+			</div>
+		</nav>
+	</header>
+
+	<!-- end of navbar header -->
+	<!--Search Button-->
+	<div class="faculty-class">
+    <div class="container-fluid">
+        <form class="example" action="">
+          <input type="text" id="studentInput" onkeyup='filter()' placeholder="Search Student Name.." name="search" style="font-style: italic;">
+          <button type="submit" style="margin-top: 25px;"><i class="fa fa-search"></i></button>
+        </form>
+    </div>  
+
+    <!--INPUT FORM-->
+    <!--SECTION 1-->
+    <div style="margin-right: 50px;margin-left: 50px;margin-top: 50px; padding: 20px; background-color: white;">
+    	<form id="myForm" action="./adminsection.html">
+	  	<div id="listing" style="white-space: nowrap; overflow-x: scroll;"><input type="text" name="Section" placeholder="Type Section" style=" margin-bottom: 10px;" >
+			<table  class="table" align='center' id="data_table" border=1 style="text-align: center;font-size: 15px;margin-top: 0;padding-top: 0;">
+			<tr>
+			<th style="width:30%">LAST NAME</th>
+			<th style="width:30%">FIRST NAME</th>
+			<th style="width:25%">M.I</th>
+			<th style="width:10%;">Action</th>
+			</tr>
+			<tr>
+			<td><input type="text" id="new_lastname"></td>
+			<td><input type="text" id="new_firstname"></td>
+			<td><input type="text" id="new_middleinitial"></td>
+			<td>
+				<input type="button" class="add" onclick="add_row();" value="Add Row">
+			</td>
+			</tr>
+
+			</table>
+		</div>
+		<input type="button" onclick="myFunction()" value="Submit form">
+	</form>
+	</div>
+	<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+			
+
+
+    	
+	<!-- jQuery (Bootstrap JS plugins depend on it) -->
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+	
+<!--Search TABLE-->
+    <script type="application/javascript">
+        function filter() {
+    // Declare variables
+        var input, filter, tables, tr, td, i;
+        input = document.getElementById("studentInput");
+        filter = input.value.toUpperCase();
+        tables = document.getElementsByClassName("table");
+        
+        for(var k = 0; k < tables.length; k++) {
+            tr = tables[k].getElementsByTagName("tr");
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                if (!tr[i].classList.contains('header')) {
+                    td = tr[i].getElementsByTagName("td"),
+                        match = false;
+                    for (j = 0; j < td.length; j++) {
+                        if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            match = true;
+                            break;
+                        }
+                    }
+                    if (!match) {
+                        tr[i].style.display = "none";
+                    } else {
+                        tr[i].style.display = "";
+                    }
+                }
+            }
+        }
+    }
+    </script>
+
+<!--STUDENT ADDING-->
+<script type="text/javascript">
+	function edit_row(no){
+		 document.getElementById("edit_button"+no).style.display="none";
+		 document.getElementById("save_button"+no).style.display="block";
+			
+		 var lastname=document.getElementById("lastname_row"+no);
+		 var firstname=document.getElementById("firstname_row"+no);
+		 var middleinitial=document.getElementById("middleinitial_row"+no);
+			
+		 var lastname_data=lastname.innerHTML;
+		 var firstname_data=firstname.innerHTML;
+		 var middleinitial_data=middleinitial.innerHTML;
+			
+		 lastname.innerHTML="<input type='text' id='lastname_text"+no+"' value='"+lastname_data+"'>";
+		 firstname.innerHTML="<input type='text' id='firstname_text"+no+"' value='"+firstname_data+"'>";
+		 middleinitial.innerHTML="<input type='text' id='middleinitial_text"+no+"' value='"+middleinitial_data+"'>";
+		}
+
+	function save_row(no)
+		{
+		 var lastname_val=document.getElementById("lastname_text"+no).value;
+		 var firstname_val=document.getElementById("firstname_text"+no).value;
+		 var middleinitial_val=document.getElementById("middleinitial_text"+no).value;
+
+		 document.getElementById("lastname_row"+no).innerHTML=lastname_val;
+		 document.getElementById("firstname_row"+no).innerHTML=firstname_val;
+		 document.getElementById("middleinitial_row"+no).innerHTML=middleinitial_val;
+
+		 document.getElementById("edit_button"+no).style.display="block";
+		 document.getElementById("save_button"+no).style.display="none";
+		}
+
+	function delete_row(no)
+		{
+		 document.getElementById("row"+no+"").outerHTML="";
+		}
+
+	function add_row()
+		{
+		 var new_lastname=document.getElementById("new_lastname").value;
+		 var new_firstname=document.getElementById("new_firstname").value;
+		 var new_middleinitial=document.getElementById("new_middleinitial").value;
+			
+		 var table=document.getElementById("data_table");
+		 var table_len=(table.rows.length)-1;
+		 var row = table.insertRow(table_len).outerHTML="<tr id='row"+table_len+"'><td id='lastname_row"+table_len+"'>"+new_lastname+"</td><td id='firstname_row"+table_len+"'>"+new_firstname+"</td><td id='middleinitial_row"+table_len+"'>"+new_middleinitial+"</td><td><input type='button' id='edit_button"+table_len+"' value='Edit' class='edit' onclick='edit_row("+table_len+")'> <input type='button' id='save_button"+table_len+"' value='Save' class='save' onclick='save_row("+table_len+")'> <input type='button' value='Delete' class='delete' onclick='delete_row("+table_len+")'></td></tr>";
+
+		 document.getElementById("new_lastname").value="";
+		 document.getElementById("new_firstname").value="";
+		 document.getElementById("new_middleinitial").value="";
+		}
+</script>
+<script type="application/javascript">
+
+		function myFunction() {
+		  document.getElementById("myForm").submit();
+		}
+
+</script>
+
+</body>
+</html>

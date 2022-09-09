@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <title>LMS : Totolan Elementary School</title>
+
+    <!--TOTOLAN LOGO-->
+    <link rel="icon" type="image/png" href="./images/image.png">
+
+    <!-- Google Fonts link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,600;1,700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- External link -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body class="profile">
+    <header>
+        <nav id="header-nav" class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="./facultypage.html" class="float-left d-none d-sm-block"> <!-- pull-left is just a float left but in bootstrap way -->
+                        <div id="logo-img" alt="Logo image"></div>
+                    </a>
+
+                    <div class="navbar-brand">
+                        <a href="./facultypage.html" >
+                            <h1>TOTOLAN ELEMENTARY SCHOOL</h1>
+                        </a>
+                        <p>
+                            <span>Learning Management System</span>
+                        </p>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsable-nav" aria-control="collapsable-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="collapsable-nav">
+          <ul id="nav-list" class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./facultyprofile.html"><small>MY PROFILE</small></a>
+            </li>
+            <!-- Dropdown of MY CLASS-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                <small>MY CLASS</small>
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#section1"><small>Section 1</small></a>
+                <a class="dropdown-item" href="#section2"><small>Section 2</small></a>
+                <a class="dropdown-item" href="#section3"><small>Section 3</small></a>
+              </div>
+            </li>
+            <!-- Dropdown of GRADES-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                <small>GRADES</small>
+              </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./facultygrades.html#subject1"><small>Subject 1</small></a>
+                  <a class="dropdown-item" href="./facultygrades.html#subject2"><small>Subject 2</small></a>
+                  <a class="dropdown-item" href="./facultygrades.html#subject3"><small>Subject 3</small></a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./facultysubmission.html"><small>SUBMIT A GRADE</small></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html"><small>LOG OUT</small></a>
+            </li>
+          </ul>
+      </div>
+        </nav>
+    </header>
+
+    <!-- end of navbar header -->
+
+<!-- Search form -->
+
+<div class="faculty-class">
+    <div class="container-fluid">
+        <form class="example" action="">
+          <input type="text" id="studentInput" onkeyup='filter()' placeholder="Search Student Name.." name="search" style="font-style: italic;">
+          <button type="submit" style="margin-top: 25px;"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+</div>  
+
+<!--section1-->
+<div  class="container-fluid">
+    <div id="section1"><span>SECTION 1</span></div>
+    <div class="listofstudents">
+        <div class="card shadow-sm">
+          <div class="male-header bg-transparent text-center" style="padding: 10px; ">
+            <i class="fas fa-male" style="font-size:25px; color: darkblue; "></i>
+          </div>
+          <div class="list-body">
+             <table class="table table-bordered table-hover table-condensed" data-filter-control="true" data-show-search-clear-button="true">
+              <tr>
+                <th>ID Numbers</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>M.I</th>
+                <th>Birthday</th>
+                <th>Address</th>
+                <th>Mother</th>
+                <th>Contact Number</th>
+                <th>Father</th>
+                <th>Contact Number</th>
+              </tr>
+              <tr>
+                <td>0000001</td>
+                <td>Anderson</td>
+                <td>Clark</td>
+                <td>M.</td>
+                <td>May 06,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Hannah M. Anderson</td>
+                <td>09458290039</td>
+                <td>Harry C. Anderson</td>
+                <td>09996783947</td>
+              </tr>
+              <tr>
+                <td>0000002</td>
+                <td>Dante</td>
+                <td>Bently</td>
+                <td>L.</td>
+                <td>January 11,2016</td>
+                <td>Songculan Dauis Bohol</td>
+                <td>Cassandra L. Dante</td>
+                <td>09724039719</td>
+                <td>Carlo P. Dante</td>
+                <td>09820383927</td>
+              </tr>
+              <tr>
+                <td>0000003</td>
+                <td>Montejos</td>
+                <td>Damian</td>
+                <td>B.</td>
+                <td>December 30,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Layla B. Montejos</td>
+                <td>09711029719</td>
+                <td>Balmond M. Montejos</td>
+                <td>09091394727</td>
+              </tr>
+              <tr>
+                <td>0000004</td>
+                <td>Tammes</td>
+                <td>Marco</td>
+                <td>O.</td>
+                <td>March 10,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Jennifer O. Tammes</td>
+                <td>09082936829</td>
+                <td>Rolly A. Tammes</td>
+                <td>09734608327</td>
+              </tr>
+              <tr>
+                <td>0000005</td>
+                <td>Ortiga</td>
+                <td>Gary</td>
+                <td>M.</td>
+                <td>February 1,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Hannah M. Ortiga</td>
+                <td>09836498329</td>
+                <td>Raldo C. Ortiga</td>
+                <td>09124683947</td>
+              </tr>
+            </table>
+          </div>
+        </div> 
+    </div>
+    </div>
+
+
+    <div  class="container-fluid">
+    <div class="listofstudents">
+         <div class="card shadow-sm">
+          <div class="female-header bg-transparent text-center" style="padding: 10px; ">
+            <i class="fas fa-female" style="font-size:25px; color: deeppink; "></i>
+          </div>
+          <div class="list-body">
+             <table class="table table-bordered table-hover table-condensed" data-filter-control="true" data-show-search-clear-button="true">
+              <tr>
+                <th>ID Numbers</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>M.I</th>
+                <th>Birthday</th>
+                <th>Address</th>
+                <th>Mother</th>
+                <th>Contact Number</th>
+                <th>Father</th>
+                <th>Contact Number</th>
+              </tr>
+              <tr>
+                <td>0000001</td>
+                <td>Baque</td>
+                <td>Zendy</td>
+                <td>C.</td>
+                <td>June 17,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Susan O. Baque</td>
+                <td>09264923409</td>
+                <td>Marlon P. Baque</td>
+                <td>09210923247</td>
+              </tr>
+              <tr>
+                <td>0000002</td>
+                <td>Geronimo</td>
+                <td>Sarah</td>
+                <td>Q.</td>
+                <td>April 15,2016</td>
+                <td>Songculan Dauis Bohol</td>
+                <td>Pinty Q. Geronimo</td>
+                <td>09711029719</td>
+                <td>Paul M. Geronimo</td>
+                <td>09091394727</td>
+              </tr>
+              <tr>
+                <td>0000003</td>
+                <td>Granger</td>
+                <td>Ariana</td>
+                <td>L.</td>
+                <td>October 5,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Hannah L. Granger</td>
+                <td>09912478329</td>
+                <td>Harry C. Granger</td>
+                <td>09921498327</td>
+              </tr>
+              <tr>
+                <td>0000004</td>
+                <td>Solomon</td>
+                <td>Mary Jane</td>
+                <td>S.</td>
+                <td>November 10,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Jennifer S. Solomon</td>
+                <td>09732674568</td>
+                <td>Rolly A. Solomon</td>
+                <td>09836598437</td>
+              </tr>
+              <tr>
+                <td>0000005</td>
+                <td>Tan</td>
+                <td>Sandy</td>
+                <td>M.</td>
+                <td>December 26,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Lolita M. Tan</td>
+                <td>09082936829</td>
+                <td>Danny C. Tan</td>
+                <td>09734608327</td>
+              </tr>
+            </table>
+          </div>
+        </div> 
+    </div>
+    </div>
+
+<!--section2-->
+<div  class="container-fluid">
+    <div id="section2"><span>SECTION 2</span></div>
+    <div class="listofstudents">
+        <div class="card shadow-sm">
+          <div class="male-header bg-transparent text-center" style="padding: 10px; ">
+            <i class="fas fa-male" style="font-size:25px; color: darkblue; "></i>
+          </div>
+          <div class="list-body">
+             <table class="table table-bordered table-hover table-condensed" data-filter-control="true" data-show-search-clear-button="true">
+              <tr>
+                <th>ID Numbers</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>M.I</th>
+                <th>Birthday</th>
+                <th>Address</th>
+                <th>Mother</th>
+                <th>Contact Number</th>
+                <th>Father</th>
+                <th>Contact Number</th>
+              </tr>
+              <tr>
+                <td>0000001</td>
+                <td>Anderson</td>
+                <td>Clark</td>
+                <td>M.</td>
+                <td>May 06,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Hannah M. Anderson</td>
+                <td>09458290039</td>
+                <td>Harry C. Anderson</td>
+                <td>09996783947</td>
+              </tr>
+              <tr>
+                <td>0000002</td>
+                <td>Dante</td>
+                <td>Bently</td>
+                <td>L.</td>
+                <td>January 11,2016</td>
+                <td>Songculan Dauis Bohol</td>
+                <td>Cassandra L. Dante</td>
+                <td>09724039719</td>
+                <td>Carlo P. Dante</td>
+                <td>09820383927</td>
+              </tr>
+              <tr>
+                <td>0000003</td>
+                <td>Montejos</td>
+                <td>Damian</td>
+                <td>B.</td>
+                <td>December 30,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Layla B. Montejos</td>
+                <td>09711029719</td>
+                <td>Balmond M. Montejos</td>
+                <td>09091394727</td>
+              </tr>
+              <tr>
+                <td>0000004</td>
+                <td>Tammes</td>
+                <td>Marco</td>
+                <td>O.</td>
+                <td>March 10,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Jennifer O. Tammes</td>
+                <td>09082936829</td>
+                <td>Rolly A. Tammes</td>
+                <td>09734608327</td>
+              </tr>
+              <tr>
+                <td>0000005</td>
+                <td>Ortiga</td>
+                <td>Gary</td>
+                <td>M.</td>
+                <td>February 1,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Hannah M. Ortiga</td>
+                <td>09836498329</td>
+                <td>Raldo C. Ortiga</td>
+                <td>09124683947</td>
+              </tr>
+            </table>
+          </div>
+        </div> 
+    </div>
+    </div>
+
+
+    <div  class="container-fluid">
+    <div class="listofstudents">
+         <div class="card shadow-sm">
+          <div class="female-header bg-transparent text-center" style="padding: 10px; ">
+            <i class="fas fa-female" style="font-size:25px; color: deeppink; "></i>
+          </div>
+          <div class="list-body">
+             <table class="table table-bordered table-hover table-condensed" data-filter-control="true" data-show-search-clear-button="true">
+              <tr>
+                <th>ID Numbers</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>M.I</th>
+                <th>Birthday</th>
+                <th>Address</th>
+                <th>Mother</th>
+                <th>Contact Number</th>
+                <th>Father</th>
+                <th>Contact Number</th>
+              </tr>
+              <tr>
+                <td>0000001</td>
+                <td>Baque</td>
+                <td>Zendy</td>
+                <td>C.</td>
+                <td>June 17,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Susan O. Baque</td>
+                <td>09264923409</td>
+                <td>Marlon P. Baque</td>
+                <td>09210923247</td>
+              </tr>
+              <tr>
+                <td>0000002</td>
+                <td>Geronimo</td>
+                <td>Sarah</td>
+                <td>Q.</td>
+                <td>April 15,2016</td>
+                <td>Songculan Dauis Bohol</td>
+                <td>Pinty Q. Geronimo</td>
+                <td>09711029719</td>
+                <td>Paul M. Geronimo</td>
+                <td>09091394727</td>
+              </tr>
+              <tr>
+                <td>0000003</td>
+                <td>Granger</td>
+                <td>Ariana</td>
+                <td>L.</td>
+                <td>October 5,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Hannah L. Granger</td>
+                <td>09912478329</td>
+                <td>Harry C. Granger</td>
+                <td>09921498327</td>
+              </tr>
+              <tr>
+                <td>0000004</td>
+                <td>Solomon</td>
+                <td>Mary Jane</td>
+                <td>Sandilan</td>
+                <td>November 10,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Jennifer S. Solomon</td>
+                <td>09732674568</td>
+                <td>Rolly A. Solomon</td>
+                <td>09836598437</td>
+              </tr>
+              <tr>
+                <td>0000005</td>
+                <td>Tan</td>
+                <td>Sandy</td>
+                <td>M.</td>
+                <td>December 26,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Lolita M. Tan</td>
+                <td>09082936829</td>
+                <td>Danny C. Tan</td>
+                <td>09734608327</td>
+              </tr>
+            </table>
+          </div>
+        </div> 
+    </div>
+    </div>
+
+<!--section3-->
+<div  class="container-fluid">
+    <div id="section3"><span>SECTION 3</span></div>
+    <div class="listofstudents">
+        <div class="card shadow-sm">
+          <div class="male-header bg-transparent text-center" style="padding: 10px; ">
+            <i class="fas fa-male" style="font-size:25px; color: darkblue; "></i>
+          </div>
+          <div class="list-body">
+             <table class="table table-bordered table-hover table-condensed" data-filter-control="true" data-show-search-clear-button="true">
+              <tr>
+                <th>ID Numbers</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>M.I</th>
+                <th>Birthday</th>
+                <th>Address</th>
+                <th>Mother</th>
+                <th>Contact Number</th>
+                <th>Father</th>
+                <th>Contact Number</th>
+              </tr>
+              <tr>
+                <td>0000001</td>
+                <td>Anderson</td>
+                <td>Clark</td>
+                <td>M.</td>
+                <td>May 06,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Hannah M. Anderson</td>
+                <td>09458290039</td>
+                <td>Harry C. Anderson</td>
+                <td>09996783947</td>
+              </tr>
+              <tr>
+                <td>0000002</td>
+                <td>Dante</td>
+                <td>Bently</td>
+                <td>Lando</td>
+                <td>January 11,2016</td>
+                <td>Songculan Dauis Bohol</td>
+                <td>Cassandra L. Dante</td>
+                <td>09724039719</td>
+                <td>Carlo P. Dante</td>
+                <td>09820383927</td>
+              </tr>
+              <tr>
+                <td>0000003</td>
+                <td>Montejos</td>
+                <td>Damian</td>
+                <td>B.</td>
+                <td>December 30,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Layla B. Montejos</td>
+                <td>09711029719</td>
+                <td>Balmond M. Montejos</td>
+                <td>09091394727</td>
+              </tr>
+              <tr>
+                <td>0000004</td>
+                <td>Tammes</td>
+                <td>Marco</td>
+                <td>O.</td>
+                <td>March 10,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Jennifer O. Tammes</td>
+                <td>09082936829</td>
+                <td>Rolly A. Tammes</td>
+                <td>09734608327</td>
+              </tr>
+              <tr>
+                <td>0000005</td>
+                <td>Ortiga</td>
+                <td>Gary</td>
+                <td>M.</td>
+                <td>February 1,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Hannah M. Ortiga</td>
+                <td>09836498329</td>
+                <td>Raldo C. Ortiga</td>
+                <td>09124683947</td>
+              </tr>
+            </table>
+          </div>
+        </div> 
+    </div>
+    </div>
+
+
+    <div  class="container-fluid">
+    <div class="listofstudents">
+         <div class="card shadow-sm">
+          <div class="female-header bg-transparent text-center" style="padding: 10px; ">
+            <i class="fas fa-female" style="font-size:25px; color: deeppink; "></i>
+          </div>
+          <div class="list-body">
+             <table class="table table-bordered table-hover table-condensed" data-filter-control="true" data-show-search-clear-button="true">
+              <tr>
+                <th>ID Numbers</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>M.I</th>
+                <th>Birthday</th>
+                <th>Address</th>
+                <th>Mother</th>
+                <th>Contact Number</th>
+                <th>Father</th>
+                <th>Contact Number</th>
+              </tr>
+              <tr>
+                <td>0000001</td>
+                <td>Baque</td>
+                <td>Zendy</td>
+                <td>C.</td>
+                <td>June 17,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Susan O. Baque</td>
+                <td>09264923409</td>
+                <td>Marlon P. Baque</td>
+                <td>09210923247</td>
+              </tr>
+              <tr>
+                <td>0000002</td>
+                <td>Geronimo</td>
+                <td>Sarah</td>
+                <td>Q.</td>
+                <td>April 15,2016</td>
+                <td>Songculan Dauis Bohol</td>
+                <td>Pinty Q. Geronimo</td>
+                <td>09711029719</td>
+                <td>Paul M. Geronimo</td>
+                <td>09091394727</td>
+              </tr>
+              <tr>
+                <td>0000003</td>
+                <td>Granger</td>
+                <td>Ariana</td>
+                <td>L.</td>
+                <td>October 5,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Hannah L. Granger</td>
+                <td>09912478329</td>
+                <td>Harry C. Granger</td>
+                <td>09921498327</td>
+              </tr>
+              <tr>
+                <td>0000004</td>
+                <td>Solomon</td>
+                <td>Mary Jane</td>
+                <td>S.</td>
+                <td>November 10,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Jennifer S. Solomon</td>
+                <td>09732674568</td>
+                <td>Rolly A. Solomon</td>
+                <td>09836598437</td>
+              </tr>
+              <tr>
+                <td>0000005</td>
+                <td>Tan</td>
+                <td>Sandy</td>
+                <td>M.</td>
+                <td>December 26,2016</td>
+                <td>Totolan Dauis Bohol</td>
+                <td>Lolita M. Tan</td>
+                <td>09082936829</td>
+                <td>Danny C. Tan</td>
+                <td>09734608327</td>
+              </tr>
+            </table>
+          </div>
+        </div> 
+    </div>
+    </div>
+    </div>
+</div>
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+
+
+
+
+            
+
+
+<!-- jQuery (Bootstrap JS plugins depend on it) -->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+ 
+ <!--Search TABLE-->
+    <script type="application/javascript">
+        function filter() {
+    // Declare variables
+        var input, filter, tables, tr, td, i;
+        input = document.getElementById("studentInput");
+        filter = input.value.toUpperCase();
+        tables = document.getElementsByClassName("table");
+        
+        for(var k = 0; k < tables.length; k++) {
+            tr = tables[k].getElementsByTagName("tr");
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                if (!tr[i].classList.contains('header')) {
+                    td = tr[i].getElementsByTagName("td"),
+                        match = false;
+                    for (j = 0; j < td.length; j++) {
+                        if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            match = true;
+                            break;
+                        }
+                    }
+                    if (!match) {
+                        tr[i].style.display = "none";
+                    } else {
+                        tr[i].style.display = "";
+                    }
+                }
+            }
+        }
+    }
+    </script>
+
+</body>
+</html>

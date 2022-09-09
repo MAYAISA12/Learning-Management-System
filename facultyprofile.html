@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <title>LMS : Totolan Elementary School</title>
+
+    <!--TOTOLAN LOGO-->
+    <link rel="icon" type="image/png" href="./images/image.png">
+
+    <!-- Google Fonts link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,600;1,700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+ 
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- External link -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body class="profile">
+    <header>
+        <nav id="header-nav" class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="./facultypage.html" class="float-left d-none d-sm-block"> <!-- pull-left is just a float left but in bootstrap way -->
+                        <div id="logo-img" alt="Logo image"></div>
+                    </a>
+
+                    <div class="navbar-brand">
+                        <a href="./facultypage.html" >
+                            <h1>TOTOLAN ELEMENTARY SCHOOL</h1>
+                        </a>
+                        <p>
+                            <span>Learning Management System</span>
+                        </p>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsable-nav" aria-control="collapsable-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="collapsable-nav">
+          <ul id="nav-list" class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./facultyprofile.html"><small>MY PROFILE</small></a>
+            </li>
+            <!-- Dropdown of MY CLASS-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                <small>MY CLASS</small>
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="./facultyclass.html#section1"><small>Section 1</small></a>
+                <a class="dropdown-item" href="./facultyclass.html#section2"><small>Section 2</small></a>
+                <a class="dropdown-item" href="./facultyclass.html#section3"><small>Section 3</small></a>
+              </div>
+            </li>
+        <!-- Dropdown of GRADES-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                <small>GRADES</small>
+              </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./facultygrades.html#subject1"><small>Subject 1</small></a>
+                  <a class="dropdown-item" href="./facultygrades.html#subject2"><small>Subject 2</small></a>
+                  <a class="dropdown-item" href="./facultygrades.html#subject3"><small>Subject 3</small></a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./facultysubmission.html"><small>SUBMIT A GRADE</small></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html"><small>LOG OUT</small></a>
+            </li>
+          </ul>
+      </div>
+        </nav>
+    </header>
+
+    <!-- end of navbar header -->
+
+<div class="student-profile py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent text-center">
+            <img class="profile_img" src="https://source.unsplash.com/600x300/?student" alt="student dp">
+            <h3>MAY M. AISA</h3>
+          </div>
+          <div class="card-body">
+            <p class="mb-0"><strong class="pr-1">Teacher ID:</strong>321000001</p>
+            <p class="mb-0"><strong class="pr-1">Subject:</strong>Math</p>
+            <p class="mb-0"><strong class="pr-1">Class:</strong>4</p>
+            <p class="mb-0"><strong class="pr-1">Section:</strong>Gumamela</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent border-0">
+            <h3 class="mb-0"><i class="far fa-clone pr-1"></i>General Information</h3>
+          </div>
+          <div class="card-body pt-0">
+            <table class="table table-bordered">
+              <tr>
+                <th width="30%">Age</th>
+                <td width="2%">:</td>
+                <td>22</td>
+              </tr>
+              <tr>
+                <th width="30%">Gender</th>
+                <td width="2%">:</td>
+                <td>Female</td>
+              </tr>
+              <tr>
+                <th width="30%">Home Address</th>
+                <td width="2%">:</td>
+                <td>Tabalong Dauis Bohol</td>
+              </tr>
+              <tr>
+                <th width="30%">Religion</th>
+                <td width="2%">:</td>
+                <td>Roman Catholic</td>
+              </tr>
+              <tr>
+                <th width="30%">Birthday</th>
+                <td width="2%">:</td>
+                <td>May 12,1999</td>
+              </tr>
+              <tr>
+                <th width="30%">Birthplace</th>
+                <td width="2%">:</td>
+                <td>Butuan City</td>
+              </tr>
+              <tr>
+                <th width="30%">Mother's Name</th>
+                <td width="2%">:</td>
+                <td>Nerissa M. Aisa</td>
+              </tr>
+              <tr>
+                <th width="30%">Mother's Occupation</th>
+                <td width="2%">:</td>
+                <td>Housewife</td>
+              </tr>
+              <tr>
+                <th width="30%">Contact Number</th>
+                <td width="2%">:</td>
+                <td>09988776655</td>
+              </tr>
+              <tr>
+                <th width="30%">Father's Name</th>
+                <td width="2%">:</td>
+                <td>Rolante C. Aisa</td>
+              </tr>
+              <tr>
+                <th width="30%">Father's Occupation</th>
+                <td width="2%">:</td>
+                <td>Carpenter</td>
+              </tr>
+              <tr>
+                <th width="30%">Contact Number</th>
+                <td width="2%">:</td>
+                <td>09988776655</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- jQuery (Bootstrap JS plugins depend on it) -->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+</body>
+</html>

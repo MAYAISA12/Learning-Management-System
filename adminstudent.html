@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <title>LMS : Totolan Elementary School</title>
+
+    <!--TOTOLAN LOGO-->
+    <link rel="icon" type="image/png" href="./images/image.png">
+
+    <!-- Google Fonts link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,600;1,700&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+ 
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- External link -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body class="body">
+	<header>
+		<nav id="header-nav" class="navbar navbar-expand-lg navbar-light">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="./adminpage.html" class="float-left d-none d-sm-block"> <!-- pull-left is just a float left but in bootstrap way -->
+						<div id="logo-img" alt="Logo image"></div>
+					</a>
+
+					<div class="navbar-brand">
+						<a href="./adminpage.html" >
+							<h1>TOTOLAN ELEMENTARY SCHOOL</h1>
+						</a>
+						<p>
+							<span>Learning Management System</span>
+						</p>
+					</div>
+				</div>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsable-nav" aria-control="collapsable-nav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="collapsable-nav">
+					<ul id="nav-list" class="navbar-nav mx-auto">
+						<li class="nav-item">
+						    <a class="nav-link" href="./adminprofile.html"><small>MY PROFILE</small></a>
+						</li>
+						<li class="nav-item">
+						    <a class="nav-link" href="./adminfaculty.html"><small>FACULTY</small></a>
+						</li>
+						<li class="nav-item">
+						    <a class="nav-link" href="./adminstudent.html"><small>STUDENT</small></a>
+						</li>
+						<!-- Dropdown of SECTION-->
+			            <li class="nav-item dropdown">
+			              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+			                <small>SECTION</small>
+			              </a>
+			              <div class="dropdown-menu">
+			                <a class="dropdown-item" href="./adminsection.html"><small>SECTION LIST</small></a>
+			                <a class="dropdown-item" href="./adminaddsection.html"><small>ADD SECTION</small></a>
+			              </div>
+			            </li>
+						<li class="nav-item">
+						    <a class="nav-link" href="./index.html"><small>LOG OUT</small></a>
+						</li>
+					</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- end of navbar header -->
+	<!--Search Button-->
+	<div class="faculty-class">
+    <div class="container-fluid">
+        <form class="example" action="">
+          <input type="text" id="studentInput" onkeyup='filter()' placeholder="Search Student Name.." name="search" style="font-style: italic;">
+          <button type="submit" style="margin-top: 25px;"><i class="fa fa-search"></i></button>
+        </form>
+    </div>  
+
+    <!--INPUT FORM-->
+   <div class="student-profile py-4">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-lg-3">
+	        <div class="card shadow-sm">
+	          <div class="card-header bg-transparent">
+	          	<div class="newInform">ADD NEW INFORMATION</div>
+	    		<table class="tableform">
+	    			<tr>
+	    				<td >
+			                <form autocomplete="off" onsubmit="onFormSubmitStudent()">
+			                    <div>
+			                        <label for="iDs">ID</label>
+			                        <input type="number" name="iDs" id="iDs">
+			                    </div>
+			                    <div>
+			                        <label for="lastNames">Last Name</label>
+			                        <input type="text" name="lastNames" id="lastNames">
+			                    </div>
+			                    <div>
+			                        <label for="firstNames">First Name</label>
+			                        <input type="text" name="firstNames" id="firstNames">
+			                    </div>
+			                    <div>
+			                        <label for="middleInitials">M.I</label>
+			                        <input type="text" name="middleInitials" id="middleInitials">
+			                    </di>
+			                    <div>
+			                        <label for="classs">Class</label>
+			                        <input type="text" name="classs" id="classs">
+			                    </div>
+			                    <div>
+			                        <label for="sections">Section</label>
+			                        <input type="text" name="sections" id="sections">
+			                    </div>
+			                    <div>
+			                        <label for="advisers">Adviser</label>
+			                        <input type="text" name="advisers" id="advisers">
+			                    </div>
+			                    <div>
+			                        <label for="ages">Age</label>
+			                        <input type="number" name="ages" id="ages">
+			                    </div>
+			                    <div>
+			                        <label for="genders">Gender</label>
+			                        <input type="text" name="genders" id="genders">
+			                    </div>
+			                    <div>
+			                        <label for="homeAddresss">Home Address</label>
+			                        <input type="text" name="homeAddresss" id="homeAddresss">
+			                    </div>
+			                    <div>
+			                        <label for="religions">Religion</label>
+			                        <input type="text" name="religions" id="religions">
+			                    </div>
+			                    <div>
+			                        <label for="birthDays">Birthday</label>
+			                        <input type="date" name="birthDays" id="birthDays">
+			                    </div>
+			                    <div>
+			                        <label for="birthPlaces">BirthPlace</label>
+			                        <input type="text" name="birthPlaces" id="birthPlaces">
+			                    </div>
+			                    <div>
+			                        <label for="mothersNames">Mothers Name</label>
+			                        <input type="text" name="mothersNames" id="mothersNames">
+			                    </div>
+			                    <div>
+			                        <label for="mothersOccupations">Mothers Occupation</label>
+			                        <input type="text" name="mothersOccupations" id="mothersOccupations">
+			                    </div>
+			                    <div>
+			                        <label for="mcontactNos">Contact Number</label>
+			                        <input type="tel" name="mcontactNos" id="mcontactNos">
+			                    </div>
+			                    <div>
+			                        <label for="fathersNames">Fathers Name</label>
+			                        <input type="text" name="fathersNames" id="fathersNames">
+			                    </div>
+			                    <div>
+			                        <label for="fathersOccupations">Fathers Occupation</label>
+			                        <input type="text" name="fathersOccupations" id="fathersOccupations">
+			                    </div>
+			                    <div>
+			                        <label for="fcontactNos">Contact Number</label>
+			                        <input type="tel" name="fcontactNos" id="fcontactNos">
+			                    </div>
+			                    <div>
+			                        <label for="guardiansNames">Guardians Name</label>
+			                        <input type="text" name="guardiansNames" id="guardiansNames">
+			                    </div>
+			                    <div>
+			                        <label for="guardiansOccupations">Guardians Occupation</label>
+			                        <input type="text" name="guardiansOccupations" id="guardiansOccupations">
+			                    </div>
+			                    <div>
+			                        <label for="gcontactNos">Contact Number</label>
+			                        <input type="tel" name="gcontactNos" id="gcontactNos">
+			                    </div>
+
+
+			                    <div class="form_action--button">
+			                        <input type="submit" value="Submit">
+			                        <input type="reset" value="Reset">
+			                    </div>
+			                </form>
+			            </td>
+	        		</tr>
+				</table>
+    		  </div>
+    		</div>
+    	</div>
+    		<div class="col-lg-9">
+		       <div class="card shadow-sm">
+		       	<div class="card-header bg-transparent border-0">
+				</div>
+				<div class="card-body pt-0">
+					 <div class="list-body">
+					 	<div class="newInform">LIST OF STUDENTS</div>
+						<table class="table table-bordered" id="studentList">
+							<thead>
+							    <tr>
+									<th>ID</th>
+							        <th>Last Name</th>
+							        <th>First Name</th>
+							        <th>M.I</th>
+							        <th>Class</th>
+							        <th>Section</th>
+							        <th>Adviser</th>
+							        <th>Age</th>
+							        <th>Gender</th>
+							        <th>Home Address</th>
+							        <th>Religion</th>
+							        <th>Birthday</th>
+							        <th>Birthplace</th>
+							        <th>Mothers Name</th>
+							        <th>Mothers Occupation</th>
+							       	<th>Contact Number</th>
+							        <th>Fathers Name</th>
+							        <th>Fathers Occupation</th>
+							        <th>Contact Number</th>
+							        <th>Guardians Name</th>
+							        <th>Guardians Occupation</th>
+							        <th>Contact Number</th>
+							  	</tr>
+							</thead>
+						<tbody>
+
+						</tbody>
+						</table>
+					</div>
+				  </div>
+			   </div>
+			</div>
+		</div>
+	  </div>
+	
+</div>
+
+			
+
+
+    	
+	<!-- jQuery (Bootstrap JS plugins depend on it) -->
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<!--Search TABLE-->
+    <script type="application/javascript">
+        function filter() {
+    // Declare variables
+        var input, filter, tables, tr, td, i;
+        input = document.getElementById("studentInput");
+        filter = input.value.toUpperCase();
+        tables = document.getElementsByClassName("table");
+        
+        for(var k = 0; k < tables.length; k++) {
+            tr = tables[k].getElementsByTagName("tr");
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                if (!tr[i].classList.contains('header')) {
+                    td = tr[i].getElementsByTagName("td"),
+                        match = false;
+                    for (j = 0; j < td.length; j++) {
+                        if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            match = true;
+                            break;
+                        }
+                    }
+                    if (!match) {
+                        tr[i].style.display = "none";
+                    } else {
+                        tr[i].style.display = "";
+                    }
+                }
+            }
+        }
+    }
+    </script>
+
+<!--STUDENT ADDING-->
+<script type="text/javascript">
+	var selectedRow = null
+
+function onFormSubmitStudent(e) {
+    event.preventDefault();
+        var formData = readFormData();
+        if (selectedRow == null){
+            insertNewRecord(formData);
+        }
+        else{
+            updateRecord(formData);
+        }
+        resetForm();    
+}
+
+//Retrieve the data
+function readFormData() {
+    var formData = {};
+    formData["iDs"] = document.getElementById("iDs").value;
+    formData["lastNames"] = document.getElementById("lastNames").value;
+    formData["firstNames"] = document.getElementById("firstNames").value;
+    formData["middleInitials"] = document.getElementById("middleInitials").value;
+    formData["classs"] = document.getElementById("classs").value;
+    formData["sections"] = document.getElementById("sections").value;
+    formData["advisers"] = document.getElementById("advisers").value;
+    formData["ages"] = document.getElementById("ages").value;
+    formData["genders"] = document.getElementById("genders").value;
+    formData["homeAddresss"] = document.getElementById("homeAddresss").value;
+    formData["religions"] = document.getElementById("religions").value;
+    formData["birthDays"] = document.getElementById("birthDays").value;
+    formData["birthPlaces"] = document.getElementById("birthPlaces").value;
+    formData["mothersNames"] = document.getElementById("mothersNames").value;
+    formData["mothersOccupations"] = document.getElementById("mothersOccupations").value;
+    formData["mcontactNos"] = document.getElementById("mcontactNos").value;
+    formData["fathersNames"] = document.getElementById("fathersNames").value;
+    formData["fathersOccupations"] = document.getElementById("fathersOccupations").value;
+    formData["fcontactNos"] = document.getElementById("fcontactNos").value;
+    formData["guardiansNames"] = document.getElementById("guardiansNames").value;
+    formData["guardiansOccupations"] = document.getElementById("guardiansOccupations").value;
+    formData["gcontactNos"] = document.getElementById("gcontactNos").value;
+    return formData;
+}
+
+//Insert the data
+function insertNewRecord(data) {
+    var table = document.getElementById("studentList").getElementsByTagName('tbody')[0];
+    var newRow = table.insertRow(table.length);
+    cell1 = newRow.insertCell(0);
+        cell1.innerHTML = data.iDs;
+    cell2 = newRow.insertCell(1);
+        cell2.innerHTML = data.lastNames;
+    cell3 = newRow.insertCell(2);
+        cell3.innerHTML = data.firstNames;
+    cell4 = newRow.insertCell(3);
+        cell4.innerHTML = data.middleInitials;
+    cell5 = newRow.insertCell(4);
+        cell5.innerHTML = data.classs;
+    cell6 = newRow.insertCell(5);
+        cell6.innerHTML = data.sections;
+    cell7 = newRow.insertCell(6);
+        cell7.innerHTML = data.advisers;
+    cell8 = newRow.insertCell(7);
+        cell8.innerHTML = data.ages;
+    cell9 = newRow.insertCell(8);
+        cell9.innerHTML = data.genders;
+    cell10 = newRow.insertCell(9);
+        cell10.innerHTML = data.homeAddresss;
+    cell11 = newRow.insertCell(10);
+        cell11.innerHTML = data.religions;
+    cell12 = newRow.insertCell(11);
+        cell12.innerHTML = data.birthDays;
+    cell13 = newRow.insertCell(12);
+        cell13.innerHTML = data.birthPlaces;
+    cell14 = newRow.insertCell(13);
+        cell14.innerHTML = data.mothersNames;
+    cell15 = newRow.insertCell(14);
+        cell15.innerHTML = data.mothersOccupations;
+    cell16 = newRow.insertCell(15);
+        cell16.innerHTML = data.mcontactNos;
+    cell17 = newRow.insertCell(16);
+        cell17.innerHTML = data.fathersNames;
+    cell18 = newRow.insertCell(17);
+        cell18.innerHTML = data.fathersOccupations;
+    cell19 = newRow.insertCell(18);
+        cell19.innerHTML = data.fcontactNos;
+    cell20 = newRow.insertCell(19);
+        cell20.innerHTML = data.guardiansNames;
+    cell21 = newRow.insertCell(20);
+        cell21.innerHTML = data.guardiansOccupations;
+    cell22 = newRow.insertCell(21);
+        cell22.innerHTML = data.gcontactNos;
+    cell22 = newRow.insertCell(22);
+        cell22.innerHTML = `<button onClick="onEdit(this)">Edit</button> <button onClick="onDelete(this)">Delete</button>`;
+}
+
+//Edit the data
+function onEdit (td) {
+    selectedRow = td.parentElement.parentElement;
+    document.getElementById("iDs").value = selectedRow.cells[0].innerHTML;
+    document.getElementById("lastNames").value = selectedRow.cells[1].innerHTML;
+    document.getElementById("firstNames").value = selectedRow.cells[2].innerHTML;
+    document.getElementById("middleInitials").value = selectedRow.cells[3].innerHTML;
+    document.getElementById("classs").value = selectedRow.cells[4].innerHTML;
+    document.getElementById("sections").value = selectedRow.cells[5].innerHTML;
+    document.getElementById("advisers").value = selectedRow.cells[6].innerHTML;
+    document.getElementById("ages").value = selectedRow.cells[7].innerHTML;
+    document.getElementById("genders").value = selectedRow.cells[8].innerHTML;
+    document.getElementById("homeAddresss").value = selectedRow.cells[9].innerHTML;
+    document.getElementById("religions").value = selectedRow.cells[10].innerHTML;
+    document.getElementById("birthDays").value = selectedRow.cells[11].innerHTML;
+    document.getElementById("birthPlaces").value = selectedRow.cells[12].innerHTML;
+    document.getElementById("mothersNames").value = selectedRow.cells[13].innerHTML;
+    document.getElementById("mothersOccupations").value = selectedRow.cells[14].innerHTML;
+    document.getElementById("mcontactNos").value = selectedRow.cells[15].innerHTML;
+    document.getElementById("fathersNames").value = selectedRow.cells[16].innerHTML;
+    document.getElementById("fathersOccupations").value = selectedRow.cells[17].innerHTML;
+    document.getElementById("fcontactNos").value = selectedRow.cells[18].innerHTML;
+    document.getElementById("guardiansNames").value = selectedRow.cells[19].innerHTML;
+    document.getElementById("guardiansOccupations").value = selectedRow.cells[20].innerHTML;
+    document.getElementById("gcontactNos").value = selectedRow.cells[21].innerHTML;
+
+}
+function updateRecord(formData) {
+    selectedRow.cells[0].innerHTML = formData.iDs;
+    selectedRow.cells[1].innerHTML = formData.lastNames;
+    selectedRow.cells[2].innerHTML = formData.firstNames;
+    selectedRow.cells[3].innerHTML = formData.middleInitials;
+    selectedRow.cells[4].innerHTML = formData.classs;
+    selectedRow.cells[5].innerHTML = formData.sections;
+    selectedRow.cells[6].innerHTML = formData.advisers;
+    selectedRow.cells[7].innerHTML = formData.ages;
+    selectedRow.cells[8].innerHTML = formData.genders;
+    selectedRow.cells[9].innerHTML = formData.homeAddresss;
+    selectedRow.cells[0].innerHTML = formData.religions;
+    selectedRow.cells[11].innerHTML = formData.birthDays;
+    selectedRow.cells[12].innerHTML = formData.birthPlaces;
+    selectedRow.cells[13].innerHTML = formData.mothersNames;
+    selectedRow.cells[14].innerHTML = formData.mothersOccupations;
+    selectedRow.cells[15].innerHTML = formData.mcontactNos;
+    selectedRow.cells[16].innerHTML = formData.fathersNames;
+    selectedRow.cells[17].innerHTML = formData.fathersOccupations;
+    selectedRow.cells[18].innerHTML = formData.fcontactNos;
+    selectedRow.cells[19].innerHTML = formData.guardiansNames;
+    selectedRow.cells[20].innerHTML = formData.guardiansOccupations;
+    selectedRow.cells[21].innerHTML = formData.gcontactNos;
+}
+
+//Delete the data
+function onDelete(td) {
+    if (confirm('Do you want to delete this record?')) {
+        row = td.parentElement.parentElement;
+        document.getElementById('studentList').deleteRow(row.rowIndex);
+        resetForm();
+    }
+}
+
+//Reset the data
+function resetForm() {
+    document.getElementById("iDs").value = '';
+    document.getElementById("lastNames").value = '';
+    document.getElementById("firstNames").value = '';
+    document.getElementById("middleInitials").value = '';
+    document.getElementById("classs").value = '';
+    document.getElementById("sections").value = '';
+    document.getElementById("advisers").value = '';
+    document.getElementById("ages").value = '';
+    document.getElementById("genders").value = '';
+    document.getElementById("homeAddresss").value = '';
+    document.getElementById("religions").value = '';
+    document.getElementById("birthDays").value = '';
+    document.getElementById("birthPlaces").value = '';
+    document.getElementById("mothersNames").value = '';
+    document.getElementById("mothersOccupations").value = '';
+    document.getElementById("mcontactNos").value = '';
+    document.getElementById("fathersNames").value = '';
+    document.getElementById("fathersOccupations").value = '';
+    document.getElementById("fcontactNos").value = '';
+    document.getElementById("guardiansNames").value = '';
+    document.getElementById("guardiansOccupations").value = '';
+    document.getElementById("gcontactNos").value = '';
+    selectedRow = null;
+}
+</script>
+
+</body>
+</html>

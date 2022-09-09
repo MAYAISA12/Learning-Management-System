@@ -1,0 +1,495 @@
+.main {
+  padding: 50px 0 50px;
+}
+.card {
+  box-shadow: 2px 2px 4px slategrey;
+}
+.card-header {
+  border-top: 5px solid #0275d8;
+  padding: 10px; 
+  background: aliceblue;
+}
+.card-footer {
+  border-top: none;
+}
+.card-block {
+  padding: 30px 40px 30px 40px;
+}
+.card-block:nth-child(2) {
+  background: aliceblue;
+}
+.card-studentlogin {
+font-size:1.2em; 
+text-align: center; 
+margin-bottom: 10px;
+font-family: 'Karla', sans-serif;
+}
+.forgotpassword {
+  text-align: right; 
+  font-size: 0.95em; 
+  margin: -10px 0 16px 0;
+}
+.btn {
+  border-radius: 999px;
+  font-size: 0.95em;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+input[type=password].form-control, input[type=text].form-control, textarea.form-control {
+  border-radius: 999px;
+}
+label {
+  margin-bottom: 2px;
+  margin-left: 4px;
+  font-size: 0.9em;
+}
+.container {
+  padding-bottom: 90px;
+}
+
+.abcRioButton {
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  width: 100% !important;
+  box-shadow: 0 3px 5px -2px rgba(0,0,0,0.15);
+  border-radius: 5px;
+}
+body {
+  background: lightgrey;
+}
+.tes{
+  font-family: 'Karla', sans-serif;
+  font-size: 1.2em;
+  white-space: nowrap;
+  text-align: center;
+  padding: 40px;
+}
+.btn button {
+  border: none;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 5px 110px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: aliceblue; 
+  color: blue;
+  border: 2px solid #0275d8;
+  width: 300px;
+  border-radius: 0px;
+  font-family: 'Karla', sans-serif;
+  border-radius: 999px;
+}
+.btn button:hover{
+  background-color: #0275d8;
+  color: white;
+  border-color: white ;
+  font-family: 'Oxygen', sans-serif;
+}
+
+
+
+/*STUDENTPAGE*/
+.body {
+  font-size: 16px;
+  background-color: #edf6ff;
+ font-family: 'Roboto', sans-serif;
+}
+
+#header-nav {
+  background-color: #8a9ea7;
+  border-radius: 0;
+  border: 0;  
+}
+
+#logo-img {
+  background: url(./images/image4.png) no-repeat;
+  width: 100px;
+  height: 100px;
+  margin: 10px 15px 10px 0;
+}
+
+.navbar-brand {
+  padding-top: 25px;
+}
+
+.navbar-brand h1 { /*TOTOLAN ELEMENTARY SCHOOL*/
+  font-family: 'Karla', sans-serif;
+  color: darkblue;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 10px;
+  margin-bottom: 0;
+  line-height: .75;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+.navbar-brand p span { /*LEARNING MANAGEMENT SYSTEM*/
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+#nav-list {
+  margin-top: 10px;
+}
+#nav-list a {
+  color: black;
+  text-align: center;
+  margin-right: 30px;
+  background: #8a9ea7;
+  white-space: nowrap;
+
+}
+#nav-list a:hover {
+  background-color: #e2f0f9;
+  color: darkblue;
+  border-color: white ;
+}
+#active {
+  background-color: #e7e7e7;
+}
+html {
+
+  scroll-behavior: smooth;
+}
+
+/*END HEADER*/
+
+/***STUDENT PROFILE*****/
+.profile {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+}
+.student-profile {
+    font-family: 'Lato', sans-serif;
+}
+.student-profile .card {
+    border-radius: 10px;
+}
+.student-profile .card .card-header .profile_img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px auto;
+    border: 10px solid #ccc;
+    border-radius: 50%;
+}
+.student-profile .card h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.student-profile .card p {
+    font-size: 16px;
+    color: #000;
+}
+.student-profile .table th,
+.student-profile .table td {
+    font-size: 14px;
+    padding: 5px 10px;
+    color: #000;
+}
+th {
+  white-space: nowrap;
+  text-align: center;
+  background-color: aliceblue;
+}
+td {
+  white-space: nowrap;
+  font-size: 15 px;
+}
+.list-body{
+  overflow-x: scroll;
+
+}
+.list-body .table th,
+.list-body .table td {
+  font-size: 13px;
+}
+/* SEARCH BUTTON*/
+
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container-fluid {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+/*class table */
+
+.listofstudents {
+  margin: 20px 20px 20px 20px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    
+}
+
+/*form*/
+input {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 0 auto;
+     margin-top: 25px;
+   }
+#submit {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+#submit:hover {
+  background-color: lightskyblue;
+  border-color: lightskyblue;
+}
+
+label {
+      display: inline-block;
+     margin: 0 auto;
+     font-family: 'Karla', sans-serif;
+   }
+
+select {
+     margin-top: 5px;
+     background-color: aliceblue;
+     border-color: lightgrey;
+   }
+option {
+    color: black;
+    text-decoration: none;
+    padding: 12px 16px;
+    text-align: center;
+    background-color: aliceblue;
+}
+}
+#subject option , #grading option {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    padding: 0px;
+    font-size: 14px;
+    cursor: pointer;
+}
+#grading , #subject {
+    border-radius: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+#grading {
+    width: 100px;
+}
+#grading:hover , #subject:hover {
+  background-color: lightskyblue;
+  border-color: lightskyblue;
+}
+/*FACULTY ADD*/
+
+.newInform {
+   font-family: 'Roboto', sans-serif;
+   text-align: center;
+   padding-bottom: 10px;
+   font-size: 14px;
+}
+label[for="myImage"],label[for="iD"],label[for="lastName"],label[for="firstName"],
+label[for="middleInitial"],label[for="subjectHandled"],label[for="class"],
+label[for="section"],label[for="age"],label[for="gender"],label[for="homeAddress"],
+label[for="religion"],label[for="birthDay"],label[for="birthPlace"],label[for="mothersName"],
+label[for="mothersOccupation"],label[for="mcontactNo"],label[for="fathersName"],
+label[for="fathersOccupation"],label[for="fcontactNo"],label[for="guardiansName"],
+label[for="guardiansOccupation"],label[for="gcontactNo"],label[for="myImages"],
+label[for="iDs"],label[for="lastNames"],label[for="firstNames"],
+label[for="middleInitials"],label[for="advisers"],label[for="classs"],
+label[for="sections"],label[for="ages"],label[for="genders"],label[for="homeAddresss"],
+label[for="religions"],label[for="birthDays"],label[for="birthPlaces"],label[for="mothersNames"],
+label[for="mothersOccupations"],label[for="mcontactNos"],label[for="fathersNames"],
+label[for="fathersOccupations"],label[for="fcontactNos"],label[for="guardiansNames"],
+label[for="guardiansOccupations"],label[for="gcontactNos"]{
+    font-family: 'Lato', sans-serif;
+  }
+
+input[id="iD"],input[id="lastName"],input[id="firstName"],input[id="middleInitial"],
+input[id="subjectHandled"],input[id="class"],input[id="section"],input[id="age"],input[id="gender"],
+input[id="homeAddress"],input[id="religion"],input[id="birthDay"],input[id="birthPlace"],
+input[id="mothersName"],input[id="mothersOccupation"],input[id="mcontactNo"],
+input[id="fathersName"],input[id="fathersOccupation"],input[id="fcontactNo"],
+input[id="guardiansName"],input[id="guardiansOccupation"],input[id="gcontactNo"],
+input[id="iDs"],input[id="lastNames"],input[id="firstNames"],input[id="middleInitials"],
+input[id="advisers"],input[id="classs"],input[id="sections"],input[id="ages"],input[id="genders"],
+input[id="homeAddresss"],input[id="religions"],input[id="birthDays"],input[id="birthPlaces"],
+input[id="mothersNames"],input[id="mothersOccupations"],input[id="mcontactNos"],
+input[id="fathersNames"],input[id="fathersOccupations"],input[id="fcontactNos"],
+input[id="guardiansNames"],input[id="guardiansOccupations"],input[id="gcontactNos"]{
+    padding:5px 12px;
+    margin:8px 0;
+    display: block;
+    border: 1px solid rgb(165,161,161);
+    border-radius: 4px;
+}
+
+
+input[type="submit"],input[type="reset"]{
+    background: #4b99d8;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover{
+    background: #0275d8;
+}
+
+input[type="reset"]:hover{
+    background: #0275d8;
+}
+input#edit_button, input#save_button, input#delete_button{
+  display: inline-block;
+  white-space: nowrap;
+
+}
+
+/********X-LARGE DEVICE**********/
+
+@media (min-width: 1200px){
+  .jumbotron {
+    background: url(./images/jumbotron.jpg) no-repeat;
+    height: 400px;
+    width: 1000px;
+    margin-top: 25px;
+    box-shadow: 0 0 30px gray;
+  }
+
+}
+
+/********LARGE DEVICE**********/
+
+@media (min-width: 992px) and (max-width: 1199px){
+  .jumbotron {
+    background: url(./images/jumbotron2.jpg) no-repeat;
+    height: 400px;
+    margin-top: 25px;
+  }
+  .navbar-brand h1 {
+    font-size: 1.5em;
+  }
+  
+}
+/********MEDIUM DEVICE**********/
+
+@media (min-width: 768px) and (max-width: 991px){
+  .container .jumbotron {
+    background: url(./images/jumbotron3.jpg) no-repeat;
+    height: 576px;
+    margin-top: 25px;
+  }
+  #logo-img {
+    background: url(./images/image4.png) no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 5px 5px 5px 0;
+  }
+}
+
+/********SMALL DEVICE**********/
+@media (min-width: 576px) and (max-width: 767px){
+  .container .jumbotron {
+    background: url(./images/jumbotron4.jpg) no-repeat;
+    height: 432px;
+    margin-top: 25px;
+  }
+  #logo-img {
+    background: url(./images/image4.png) no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 5px 5px 5px 0;
+
+  }
+  .navbar-brand {
+    padding-top: 10px;
+    font-size: 80px;
+  }
+  .navbar-brand h1 {
+    padding-top: 10px;
+    font-size: 5vw;
+  }
+  .navbar-brand p {
+    font-size: 3vw;
+    margin-top: 12px;
+  }
+  .navbar-brand p img {
+    height: 20px;
+  }
+}
+
+/******** x-SMALL DEVICE**********/
+
+@media (max-width: 576px) {
+  .container .jumbotron {
+    background: url(./images/jumbotron4.jpg) no-repeat;
+    height: 376px;
+    margin-top: 25px;
+    margin: 10px auto;
+  }
+  .navbar-brand h1 {
+    font-size: 5vw;
+  }
+  .navbar-brand p {
+    font-size: 3vw;
+  }
+  .panel-footer section {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .panel-footer section:nth-child(3){
+    margin-bottom: 0;
+  }
+  .panel-footer section hr {
+    width: 50%;
+  }
+}
+
+
+
